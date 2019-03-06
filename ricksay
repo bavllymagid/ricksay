@@ -5,7 +5,7 @@ import random
 
 DIR = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(DIR, 'src'))
-from ponysay import Ponysay
+from main import main
 
 
 if __name__ == "__main__":
@@ -27,3 +27,5 @@ if __name__ == "__main__":
         random_quote = f.read()
 
     print(random_quote, random_pony)
+    sys.argv = ['ricksay', '-f', random_pony]
+    main()

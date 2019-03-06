@@ -35,12 +35,12 @@ pv=0 # python version
 
 ( (test $br = 1) || (test $rr = 1) || (test $ro = 1) || (test $pv = 1) ) && echo
 
-(test $br = 1) && echo 'You will not be able to build and install ponysay.'
-(test $rr = 1) && echo 'You will not be able to run ponysay.'
+(test $br = 1) && echo 'You will not be able to build and install ricksay.'
+(test $rr = 1) && echo 'You will not be able to run ricksay.'
 (test $pv = 1) && echo 'Unable to verify version of python.'
 
 (test $br = 0) && (test $bs = 0) && (test $bo = 0) && (test $rr = 0) && (test $ro = 0) &&
-    echo && echo 'Everything appears to be in order, enjoy ponysay!'
+    echo && echo 'Everything appears to be in order, enjoy ricksay!'
 
 echo
 

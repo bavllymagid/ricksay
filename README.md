@@ -1,7 +1,26 @@
 # Ricksay
 Funny quotes from Rick & Morty Adventures for your console.
-Requires fortune & ponysay(https://github.com/erkin/ponysay).
+Based on work made by [ponysay](https://github.com/erkin/ponysay) project.
+![screenshot](screenshot.png)
 
-Now working, I'll be testing on linux and windows (maybe).
-There are about 130 Rick's quotes and 50 Morty's, taken from imdb quotes.
-Pictures are taken from marvellous Rick'n'Morty wikia.
+## Installation
+#TODO
+```
+pip install ricksay
+```
+
+## Platforms
+Tested on Linux and Mac.
+
+## Sources
+Quotes taken from [IMDB](https://www.imdb.com/title/tt2861424/quotes). 
+~130 for Rick and ~50 for Morty.
+Open PR to add moar!
+
+Pictures taken from [Wikia](https://rickandmorty.fandom.com/wiki/Rickipedia) 
+for [Pocket Morties](https://rickandmorty.fandom.com/wiki/Category:Pocket_Mortys) game.
+
+## Contributing
+New ponyfines are expected to be transparent pngs.
+How to convert to ponyfile:
+#TODO

@@ -1,7 +1,7 @@
 # Ricksay
 Funny quotes from Rick & Morty Adventures for your console.
 Based on work made by [ponysay](https://github.com/erkin/ponysay) project.
-![screenshot](screenshot.png)
+![screenshot](screen.png)
 
 ## Installation
 #TODO

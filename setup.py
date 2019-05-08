@@ -101,8 +101,8 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    packages=['ponysay'],
-    scripts=['ricksay', 'mortycry'],
+    packages=['ricksay'],
+    scripts=['scripts/ricksay', 'scripts/mortycry'],
 
     install_requires=REQUIRED,
     extras_require=EXTRAS,

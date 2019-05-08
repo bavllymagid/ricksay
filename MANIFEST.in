@@ -1,4 +1,2 @@
-graft ponysay
-recursive-include ponies *.pony
-recursive-include quotes *.[1-9]*
-recursive-include balloons *.say
+graft ricksay
+recursive-exclude ricksay *.png

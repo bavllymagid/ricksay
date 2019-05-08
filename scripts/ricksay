@@ -2,8 +2,9 @@
 import os, sys
 import argparse
 import random
+import ricksay
 
-DIR = os.path.dirname(os.path.realpath(__file__))
+DIR = ricksay.__path__[0]
 
 if __name__ == "__main__":
     # parse options (for now only two)
@@ -38,5 +39,5 @@ if __name__ == "__main__":
 
     # run ponysay with faked args
     sys.argv = ['ricksay', '-f', ponyfile, '--', quote]
-    from ponysay.main import main 
+    from ricksay.main import main 
     main()

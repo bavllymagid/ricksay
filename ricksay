@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # if -f specified use given ponyfile, else get random
     ponies_dir = os.path.join(DIR, 'ponies', args.character)
-    if 'ponyfile' in args:
+    if args.ponyfile:
         ponyfile = os.path.join(ponies_dir, args.ponyfile)
     else:
         ponyfile = random.choice([os.path.join(ponies_dir,f)

@@ -102,24 +102,23 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=['ponysay'],
-    scripts=['ricksay'],
+    scripts=['ricksay','mortycry'],
     data_files=['balloons','ponies','quotes'],
 
-    # entry_points={
-    #     'console_scripts': ['mycli=mymodule:cli'],
-    # },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
-    license='MIT',
+    license='WTFPL',
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'License :: OSI Approved :: MIT License',
+        'Environment :: Console',
+        'Development Status :: 3 - Alpha',
+        'License :: WTFPL',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
+        'Operating System :: Unix',
+        'Topic :: Games/Entertainment :: Fortune Cookies'
     ],
     # $ setup.py publish support.
     cmdclass={

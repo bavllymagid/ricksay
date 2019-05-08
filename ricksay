@@ -14,10 +14,17 @@ if __name__ == "__main__":
     parser.add_argument('-m', action="store_const", dest="character",
             const="Morty", help="Morty's quote")
     parser.set_defaults(character="Rick")
+    parser.add_argument('-f', action="store", dest="ponyfile", 
+            required=False, help="Character ponyfile, default random")
     args = parser.parse_args()
+
+    # if -f specified use given ponyfile, else get random
     ponies_dir = os.path.join(DIR, 'ponies', args.character)
-    random_pony = random.choice([os.path.join(ponies_dir,f)
-        for f in os.listdir(ponies_dir)])
+    if 'ponyfile' in args:
+        ponyfile = os.path.join(ponies_dir, args.ponyfile)
+    else:
+        ponyfile = random.choice([os.path.join(ponies_dir,f)
+            for f in os.listdir(ponies_dir)])
 
     # if it's piped text use it, else get random quote
     if not sys.stdin.isatty():
@@ -30,6 +37,6 @@ if __name__ == "__main__":
             quote = f.read()
 
     # run ponysay with faked args
-    sys.argv = ['ricksay', '-f', random_pony, '--', quote]
+    sys.argv = ['ricksay', '-f', ponyfile, '--', quote]
     from ponysay.main import main 
     main()

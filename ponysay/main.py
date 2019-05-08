@@ -39,9 +39,12 @@ Authors:
          Jan Alexander "heftig" Steffens:  Major contributor of the first implementation
          Kyah "L-four" Rindlisbacher:      Patched the first implementation
 '''
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
+
 from common import *
 from argparser import *
-from ponysay import *
+from .ponysay import *
 
 
 def main():

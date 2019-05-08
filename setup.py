@@ -101,7 +101,9 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    py_modules=['ricksay'],
+    packages=['ponysay'],
+    scripts=['ricksay'],
+    data_files=['balloons','ponies','quotes'],
 
     # entry_points={
     #     'console_scripts': ['mycli=mymodule:cli'],

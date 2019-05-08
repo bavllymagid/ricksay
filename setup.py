@@ -102,8 +102,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=['ponysay'],
-    scripts=['ricksay','mortycry'],
-    data_files=['balloons','ponies','quotes'],
+    scripts=['ricksay', 'mortycry'],
 
     install_requires=REQUIRED,
     extras_require=EXTRAS,

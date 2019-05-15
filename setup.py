@@ -101,7 +101,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    packages=['ricksay'],
+    packages=find_packages(exclude='png'),
     scripts=['scripts/ricksay', 'scripts/mortycry'],
 
     install_requires=REQUIRED,

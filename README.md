@@ -4,9 +4,13 @@ Based on work made by [ponysay](https://github.com/erkin/ponysay) project.
 ![screenshot](screen.png)
 
 ## Installation
-#TODO
+Install:
 ```
 pip install ricksay
+```
+Run:
+```
+ricksay
 ```
 
 ## Platforms

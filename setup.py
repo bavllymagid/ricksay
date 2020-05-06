@@ -18,10 +18,11 @@ URL = 'https://github.com/roma-guru/ricksay'
 EMAIL = 'voropaev.roma@gmail.com'
 AUTHOR = 'Roman Voropaev'
 REQUIRES_PYTHON = '>=3.0.0'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
+    'click==6.7'
 ]
 
 # What packages are optional?
@@ -102,7 +103,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude='png'),
-    scripts=['scripts/ricksay', 'scripts/mortycry'],
+    scripts=['scripts/ricksay'],
 
     install_requires=REQUIRED,
     extras_require=EXTRAS,

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This script parses sprites shared from Pocket Morties game
 # Depends on Spriters Resource markup...
 

@@ -1,14 +1,17 @@
+#!/usr/bin/env python3
 import os
 from requests_html import HTMLSession
 from collections import defaultdict
 
+print("Starting")
 session = HTMLSession()
 r = session.get("https://www.imdb.com/title/tt2861424/quotes")
 # characters to save quotes
-characters = ("Rick", "Morty")
+characters = ("Rick", "Morty", "Beth", "Jerry", "Summer")
 # count quotes for each
 counter = defaultdict(int)
 
+print("Parsing main page")
 qs = r.html.find("div.sodatext p")
 # iterate over quotes
 for q in qs:
@@ -21,7 +24,7 @@ for q in qs:
             os.mkdir(char)
         fname = "{}/{}.{}".format(char, char, counter[char])
         with open(fname, "w") as qfile:
-            print("writing {}".format(fname))
+            print("Writing {}".format(fname))
             # says what?
             qfile.write(q.text)
             counter[char] += 1

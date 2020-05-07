@@ -22,7 +22,7 @@ for q in qs:
         # save quotes to separate files in folders
         if not os.path.isdir(char):
             os.mkdir(char)
-        fname = "{}/{}.{}".format(char, char, counter[char])
+        fname = "{}/{}.quote".format(char, counter[char])
         with open(fname, "w") as qfile:
             print("Writing {}".format(fname))
             # says what?

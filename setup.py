@@ -18,7 +18,7 @@ URL = 'https://github.com/roma-guru/ricksay'
 EMAIL = 'voropaev.roma@gmail.com'
 AUTHOR = 'Roman Voropaev'
 REQUIRES_PYTHON = '>=3.0.0'
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -87,7 +87,6 @@ class UploadCommand(Command):
         self.status('Pushing git tags…')
         os.system('git tag v{0}'.format(about['__version__']))
         os.system('git push --tags')
-        
         sys.exit()
 
 
@@ -107,8 +106,9 @@ setup(
 
     install_requires=REQUIRED,
     extras_require=EXTRAS,
+    package_data={'ricksay': [ 'ponies/*/*.pony', 'quotes/*/*.quote' ]},
     include_package_data=True,
-    license='WTFPL',
+    license='BSD',
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers

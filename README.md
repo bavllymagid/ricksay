@@ -1,5 +1,4 @@
-![Ricksay install](https://github.com/roma-guru/ricksay/workflows/Ricksay%20install/badge.svg?branch=master)
-# Ricksay
+# Ricksay ![install](https://github.com/roma-guru/ricksay/workflows/install/badge.svg?branch=master)
 Funny quotes from Rick & Morty Adventures for your console.
 Based on work made by [ponysay](https://github.com/erkin/ponysay) project.
 [![asciicast](https://asciinema.org/a/wfsw38k2E8AHaaizhqI2rO14l.svg)](https://asciinema.org/a/wfsw38k2E8AHaaizhqI2rO14l)

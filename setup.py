@@ -65,6 +65,9 @@ class UploadCommand(Command):
     def initialize_options(self):
         self.testpypi = False
 
+    def finalize_options(self):
+        pass
+
     def run(self):
         try:
             self.status("Removing previous builds…")
@@ -102,7 +105,7 @@ setup(
     scripts=["scripts/ricksay"],
     install_requires=REQUIRED,
     extras_require=EXTRAS,
-    package_data={"ricksay": ["ponies/*/*.pony", "quotes/*/*.quote"]},
+    package_data={"ricksay": ["balloons/*.say", "ponies/*/*.pony", "quotes/*.quotes"]},
     include_package_data=True,
     license="BSD",
     classifiers=[

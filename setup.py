@@ -18,10 +18,10 @@ URL = "https://github.com/roma-guru/ricksay"
 EMAIL = "voropaev.roma@gmail.com"
 AUTHOR = "Roman Voropaev"
 REQUIRES_PYTHON = ">=3.0.0"
-VERSION = "0.2.1"
+VERSION = "0.2.2"
 
 # What packages are required for this module to be executed?
-REQUIRED = ["click==6.7"]
+REQUIRED = ["click==7.*"]
 
 # What packages are optional?
 EXTRAS = {}

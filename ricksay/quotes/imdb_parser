@@ -1,30 +1,28 @@
 #!/usr/bin/env python3
 import os
 from requests_html import HTMLSession
-from collections import defaultdict
 
 print("Starting")
 session = HTMLSession()
 r = session.get("https://www.imdb.com/title/tt2861424/quotes")
 # characters to save quotes
-characters = ("Rick", "Morty", "Beth", "Jerry", "Summer")
-# count quotes for each
-counter = defaultdict(int)
+characters = ("Rick", "Morty")
+char_files = {}
+for char_name in characters:
+    fname = "{}.quotes".format(char_name)
+    char_files[char_name] = open(fname, "w")
 
 print("Parsing main page")
 qs = r.html.find("div.sodatext p")
 # iterate over quotes
 for q in qs:
-    # who says
+    # determine character
     span = q.find("span.character")
     char = span[0].element.text if len(span) else None
     if char and char in characters:
-        # save quotes to separate files in folders
-        if not os.path.isdir(char):
-            os.mkdir(char)
-        fname = "{}/{}.quote".format(char, counter[char])
-        with open(fname, "w") as qfile:
-            print("Writing {}".format(fname))
-            # says what?
-            qfile.write(q.text)
-            counter[char] += 1
+        file = char_files[char]
+        file.write(f"{q.text}\n%\n")
+
+# be nice, close at end
+for f in char_files.values():
+    f.close()

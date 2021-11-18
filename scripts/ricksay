@@ -13,7 +13,7 @@ index = random.randint(0, 4)
 @click.command()
 @click.option('--char', '-c', default=names[index], help='Name of character (Rick, Morty, Beth, Jerry, Summer).')
 @click.option('--file', '-f', required=False, help='Ponyfile to use, file path.')
-def ricksay(char, file, rando):
+def ricksay(char, file):
     # if -f specified use given file, else get random
     ponies_dir = os.path.join(DIR, "ponies", char)
     print(ponies_dir)

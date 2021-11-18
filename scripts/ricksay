@@ -16,7 +16,6 @@ index = random.randint(0, 4)
 def ricksay(char, file):
     # if -f specified use given file, else get random
     ponies_dir = os.path.join(DIR, "ponies", char)
-    print(ponies_dir)
     if file:
         file = os.path.join(ponies_dir, file)
     else:

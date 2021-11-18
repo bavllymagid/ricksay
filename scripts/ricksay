@@ -7,13 +7,16 @@ import sys
 import ricksay
 
 DIR = ricksay.__path__[0]
+names = ['Rick', 'Morty', 'Beth', 'Jerry', 'Summer'];
+index = random.randint(0, 4)
 
 @click.command()
-@click.option('--char', '-c', default='Rick', help='Name of character (Rick, Morty, Beth, Jerry, Summer).')
+@click.option('--char', '-c', default=names[index], help='Name of character (Rick, Morty, Beth, Jerry, Summer).')
 @click.option('--file', '-f', required=False, help='Ponyfile to use, file path.')
-def ricksay(char, file):
+def ricksay(char, file, rando):
     # if -f specified use given file, else get random
     ponies_dir = os.path.join(DIR, "ponies", char)
+    print(ponies_dir)
     if file:
         file = os.path.join(ponies_dir, file)
     else:
